@@ -118,9 +118,15 @@ To access the Service Caller function in rqt, follow these steps:
 		
 ## Conclusion
 In this assignment, three nodes were created: (a) an action client node that allows the user to set or cancel a target (x, y) and also publishes the robot's position and velocity as a custom message; (b) a service node that prints the number of goals reached and cancelled; and (c) a node that subscribes to the robot's position and velocity and prints the robot's distance from the target and average speed. A launch file was also generated to begin the simulation and to specify how frequently node (c) publishes information. Overall, the package shows how to utilize action clients, services, and custom messages in ROS to operate a robot and track its performance. Some suggestions for improving this assignment include:
+
 1-Utilizing markers in RViz to more intuitively communicate the desired location and the robot's current position, for as by using various colors or shapes to signify different states (e.g. goal reached, goal canceled).
+
 2-Integrating the robot's orientation into the display, for example, by using an arrow or a 3D representation of the robot to show which way it is facing.
+
 3-Using Gazebo's built-in visualization features, such as placing a marker or a flag at the target point, to display the target position in the simulated world.
+
 4-Integrating a route-planning algorithm to display the robot's intended path to the destination, such as by utilizing RViz's "Path" display type.
+
 5-Input validation is used to guarantee that users may only submit integers and not other sorts of input such as floating point numbers or characters. Whenever an incorrect input is entered, provide feedback to the user by showing an error message or marking the input field in red.
+
 6-Including a check to see if the input value is within a specific range, and if not, prompting the user to enter a value that is inside the range.

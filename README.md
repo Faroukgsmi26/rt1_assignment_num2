@@ -5,7 +5,7 @@ For this task, you must build a Gazebo and Rviz package for a robot simulation. 
 1. A node that implements an action client that enables the user to establish or cancel a target (x, y). By using the values published on the subject /odom, the node additionally broadcasts the robot's location and velocity as a custom message (x, y, vel x, vel y).
 2. A service node that publishes the total number of objectives achieved and abandoned when it is called.
 3. A node that prints the robot's average speed as well as its distance from the goal and subscribes to the robot's location and velocity using a custom message. To control how quickly the node broadcasts the data, use a parameter.
-4. Make a **launch file** as well to kick off the entire simulation. Set the value for the **frequency** of the information published by node (c).
+4. Make a **launch file** as well to kick off the entire simulation. Set the value for the **frequency** of the information published by node 3.
 
 ---------------------------------
 ## Node 1: Action (action_user.py)

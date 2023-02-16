@@ -25,7 +25,7 @@ It generates an instance of the Service class and initializes a ROS node named "
 The result callback method is invoked whenever a message on the "/reaching goal/result" topic is received. This method looks at the message's goal's status (while the robot is moving, status is 1, when the target is cancelled, status is 2, and when the robot reaches the target, status is 3), and it increases the relevant counter, either goal cancelled or goal reached. Run "rostopic echo /reaching goal/status" to see the current situation.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-## Node 3: Print Distance and Average Velociity (print_dis_avgvel.py)
+## Node 3: Print Distance and Average Velocity (print_dis_avgvel.py)
 The third node puts out data on a robot's average velocity and distance from the target. The publish frequency parameter, which controls how frequently the information is printed, is obtained by the node from ROS parameters. Moreover, it sets up a variable to record when the data was last printed and adds a subscriber to the '/posxy velxy' topic, which will receive messages containing the robot's current x, y coordinates and x, y velocities.
 
 The node initially obtains the desired and actual positions of the robot from the message received. It then uses the math.dist() method to determine the distance between the intended and actual places. It also obtains the robot's real velocity from the message and computes the average speed using the velocity components from the message. Lastly, it uses the rospy.loginfo() method to display the distance and average speed statistics, as well as to update the last reported time variable.
